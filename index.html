@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YOUR CANDLE — Coleção Luzes de Natal 2026</title>
+<meta name="description" content="Coleção Luzes de Natal YOUR CANDLE: velas artesanais de cera vegetal, kits e presentes personalizados. Bertioga/SP.">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --preto:#0d0d0d;
+    --branco:#ffffff;
+    --off:#f6f6f4;
+    --verde:#17301f;
+    --verde2:#10241a;
+    --oliva:#5a6a47;
+    --bordo:#7a1f2b;
+    --ouro:#c8a45a;
+    --texto:#4a4a4a;
+    --linha:#e4e4e1;
+    --serif:'Cormorant Garamond',Georgia,serif;
+    --sans:'Jost',system-ui,-apple-system,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:112px}
+  body{font-family:var(--sans);font-weight:300;font-size:17px;color:var(--preto);background:var(--branco);line-height:1.7;overflow-x:hidden}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+
+  .topo{position:fixed;top:0;left:0;right:0;z-index:50}
+  .aviso{background:var(--preto);color:#fff;text-align:center;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;font-weight:400}
+  .aviso b{font-weight:500;color:#f3deb0}
+  header{display:flex;justify-content:space-between;align-items:center;padding:13px 22px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--linha)}
+  .logo{display:block;line-height:0;text-decoration:none}
+  .logo img{height:42px;width:auto}
+  nav{display:flex;gap:26px}
+  nav a{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none}
+  nav a:hover{color:var(--bordo)}
+  @media(max-width:700px){nav{display:none}.aviso{font-size:.7rem;letter-spacing:.08em}}
+
+  .btn{display:inline-block;padding:15px 32px;font-family:var(--sans);font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;font-weight:400;border:1px solid var(--preto);cursor:pointer;transition:.25s;background:none;color:var(--preto)}
+  .btn-escuro{background:var(--preto);color:var(--branco)}
+  .btn-escuro:hover{background:var(--bordo);border-color:var(--bordo)}
+  .btn-linha:hover{background:var(--preto);color:var(--branco)}
+  .btn-ouro{background:var(--preto);border-color:var(--preto);color:#fff}
+  .btn-ouro:hover{background:#fff;color:var(--preto)}
+  .btn-branco{border-color:var(--preto);color:var(--preto)}
+  .btn-branco:hover{background:var(--preto);color:#fff}
+  .btn-sm{padding:11px 20px;font-size:.74rem}
+
+  .eyebrow{font-size:.8rem;letter-spacing:.28em;text-transform:uppercase;color:var(--oliva);margin-bottom:18px;font-weight:400}
+
+  section{padding:100px 24px}
+  .wrap{max-width:1180px;margin:0 auto}
+  .titulo{text-align:center;margin-bottom:54px}
+  .titulo h2{font-family:var(--serif);font-weight:500;font-size:clamp(2.1rem,4.6vw,3.3rem);line-height:1.1}
+  .titulo p{color:var(--texto);margin:14px auto 0;max-width:500px}
+  @media(max-width:700px){section{padding:68px 20px}.titulo{margin-bottom:36px}}
+
+  /* 1. Início */
+  .hero{min-height:100svh;display:grid;grid-template-columns:1fr 1fr;padding-top:108px;background:var(--off)}
+  .hero-texto{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:60px 8vw;color:var(--preto)}
+  .hero .eyebrow{color:var(--oliva);position:relative}
+  .hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.9rem,6.4vw,5.4rem);line-height:1.03;margin-bottom:20px;position:relative}
+  .hero h1 em{font-style:italic;color:var(--bordo)}
+  .hero p{max-width:430px;color:var(--texto);margin-bottom:30px;position:relative}
+  .contagem{display:inline-block;border:1px solid var(--preto);color:var(--preto);padding:9px 18px;font-size:.84rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:30px;position:relative;align-self:flex-start}
+  .hero-btns{display:flex;gap:12px;flex-wrap:wrap;position:relative}
+  .hero-img{position:relative;min-height:420px}
+  .hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .neve{display:none}
+  .neve i{position:absolute;top:-12px;border-radius:50%;background:#fff;animation:cai linear infinite}
+  @keyframes cai{to{transform:translate3d(24px,110vh,0)}}
+  @media(prefers-reduced-motion:reduce){.neve{display:none}}
+  @media(max-width:820px){
+    .hero{grid-template-columns:1fr}
+    .hero-img{order:-1;min-height:46svh}
+    .hero-texto{padding:42px 24px 56px}
+  }
+
+  /* 2. Velas */
+  .bloco-titulo{font-family:var(--serif);font-size:1.8rem;font-weight:500;margin:0 0 20px;padding-bottom:10px;border-bottom:1px solid var(--linha);display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .bloco-titulo small{font-family:var(--sans);font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--bordo);font-weight:400}
+  .bloco-titulo + .produtos{margin-bottom:60px}
+  .produtos{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .produto{position:relative;display:flex;flex-direction:column}
+  .produto img{width:100%;aspect-ratio:4/5;object-fit:cover;margin-bottom:16px;background:#ddd}
+  .produto h3{font-family:var(--serif);font-weight:500;font-size:1.55rem;line-height:1.2}
+  .produto .desc{color:var(--texto);font-size:.92rem;margin-top:2px}
+  .produto .linha{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px}
+  .produto .extra{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:10px;padding-top:10px;border-top:1px solid var(--linha);font-size:.92rem;color:var(--texto)}
+  .produto .extra b{font-weight:500;color:var(--preto)}
+  .preco{font-size:1.15rem;font-weight:500}
+  .tag{position:absolute;top:12px;left:12px;background:var(--preto);color:#fff;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;padding:5px 11px;font-weight:400;z-index:2}
+  .cta-card{background:var(--preto);color:#fff;padding:34px 28px;display:flex;flex-direction:column;justify-content:center;gap:12px;min-height:320px}
+  .cta-card .eyebrow{color:var(--ouro);margin:0}
+  .cta-card h3{font-family:var(--serif);font-weight:500;font-size:1.9rem;line-height:1.15}
+  .cta-card p{color:#d9e0d6;font-size:.95rem}
+  .cta-card .btn{align-self:flex-start;margin-top:6px}
+  .cta-card .btn-ouro{background:#fff;border-color:#fff;color:var(--preto)}
+  .cta-card .btn-ouro:hover{background:transparent;color:#fff}
+  .natal-bloco{background:var(--off);margin:0 -24px 60px;padding:44px 24px 10px}
+  .natal-bloco .bloco-titulo + .produtos{margin-bottom:34px}
+  @media(max-width:900px){.produtos{grid-template-columns:repeat(2,1fr);gap:18px}}
+  @media(max-width:520px){.produtos{grid-template-columns:1fr;max-width:440px;margin-inline:auto}.natal-bloco{margin:0 -20px 50px;padding:34px 20px 6px}}
+
+  /* 3. Presentes */
+  .pers{background:var(--off);color:var(--preto)}
+  .pers .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+  .pers img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  .pers .eyebrow{color:var(--oliva)}
+  .pers h2{font-family:var(--serif);font-weight:500;font-size:clamp(2.1rem,4.2vw,3.1rem);line-height:1.1;margin-bottom:18px}
+  .pers p{color:var(--texto);margin-bottom:14px}
+  .pers .itens{display:grid;margin:22px 0 22px}
+  .pers .itens div{padding:12px 0;border-top:1px solid var(--linha);color:var(--texto)}
+  .pers .itens div:last-child{border-bottom:1px solid var(--linha)}
+  .pers .itens strong{font-weight:500;display:block;color:var(--preto)}
+  .pers .consulta{border:1px solid var(--preto);padding:14px 18px;margin-bottom:28px;font-size:.92rem;color:var(--preto)}
+  .pers .consulta b{display:block;letter-spacing:.14em;text-transform:uppercase;font-weight:500;font-size:.82rem}
+  @media(max-width:860px){.pers .wrap{grid-template-columns:1fr;gap:38px}.pers img{aspect-ratio:1/1}}
+
+  /* 4. História */
+  .historia .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
+  .historia img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  .historia h2{font-family:var(--serif);font-weight:500;font-size:clamp(2.1rem,4.2vw,3.1rem);line-height:1.1;margin-bottom:20px}
+  .historia p{color:var(--texto);margin-bottom:14px}
+  .aromas{margin-top:26px;padding-top:22px;border-top:1px solid var(--linha)}
+  .aromas h3{font-size:.8rem;letter-spacing:.24em;text-transform:uppercase;font-weight:400;color:var(--oliva);margin-bottom:12px}
+  .aromas ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+  .aromas li{border:1px solid #cfcfcb;padding:6px 14px;font-size:.88rem}
+  .ritual{margin-top:26px;font-family:var(--serif);font-size:1.6rem;font-style:italic;color:var(--bordo)}
+  @media(max-width:860px){.historia .wrap{grid-template-columns:1fr;gap:36px}.historia img{aspect-ratio:1/1}}
+
+  /* 5. Contato */
+  .contato{background:var(--off)}
+  .contato .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:70px;align-items:start}
+  .contato h2{font-family:var(--serif);font-weight:500;font-size:clamp(2.1rem,4.4vw,3.2rem);line-height:1.1;margin-bottom:16px}
+  .contato .intro p{color:var(--texto);margin-bottom:26px}
+  .canais{display:grid;margin-bottom:28px}
+  .canais a{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-top:1px solid var(--linha);text-decoration:none;font-size:.95rem}
+  .canais a:last-child{border-bottom:1px solid var(--linha)}
+  .canais span{color:var(--texto)}
+  .horario{font-size:.88rem;color:var(--texto)}
+  form{display:grid;gap:14px}
+  label{display:block;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:6px;font-weight:400}
+  input,select,textarea{width:100%;font-family:var(--sans);font-size:1rem;font-weight:300;padding:13px 14px;border:1px solid #cfcfcc;background:#fff;color:var(--preto);border-radius:0}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--oliva);outline-offset:1px;border-color:var(--oliva)}
+  textarea{min-height:110px;resize:vertical}
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  #extras{display:none;gap:14px}
+  #extras.on{display:grid}
+  form .btn{width:100%;margin-top:6px}
+  .nota{font-size:.8rem;color:var(--texto)}
+  .faq{margin-top:34px}
+  .faq h3{font-size:.8rem;letter-spacing:.24em;text-transform:uppercase;font-weight:400;color:var(--oliva);margin-bottom:6px}
+  details{border-bottom:1px solid var(--linha);padding:12px 0}
+  summary{cursor:pointer;font-weight:400;list-style:none;display:flex;justify-content:space-between;gap:12px}
+  summary::after{content:"+";color:var(--preto)}
+  details[open] summary::after{content:"–"}
+  details p{margin-top:8px;color:var(--texto);font-size:.94rem}
+  @media(max-width:860px){.contato .wrap{grid-template-columns:1fr;gap:40px}.duo{grid-template-columns:1fr}}
+
+  footer{background:var(--preto);color:#cfd8cc;padding:34px 24px;text-align:center;font-size:.82rem}
+  @media(max-width:700px){footer{padding-bottom:96px}}
+  footer .marca{margin-bottom:14px;line-height:0}
+  footer .marca img{height:56px;width:auto;margin:0 auto}
+  footer a{text-decoration:underline;text-underline-offset:3px}
+
+  .zap{position:fixed;right:18px;bottom:18px;z-index:60;width:56px;height:56px;border-radius:50%;background:var(--preto);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.3)}
+  .zap svg{width:27px;height:27px;fill:#fff}
+</style>
+</head>
+<body>
+
+<div class="topo">
+  <div class="aviso">Natal YOUR CANDLE · <b>Encomendas abertas</b></div>
+  <header>
+    <a href="#inicio" class="logo" aria-label="YOUR CANDLE — início"><img src="logo.png" alt="YOUR CANDLE — Handcrafted candles"></a>
+    <nav>
+      <a href="#velas">Natal &amp; velas</a>
+      <a href="#presentes">Presentes</a>
+      <a href="#historia">Nossa história</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+</div>
+
+<main>
+<!-- 1. INÍCIO -->
+<div class="hero" id="inicio">
+  <div class="hero-texto">
+    <div class="neve" id="neve" aria-hidden="true"></div>
+    <div class="eyebrow">Coleção Luzes de Natal · 2026</div>
+    <h1>Acenda o <em>Natal</em>.</h1>
+    <p>Velas artesanais para a sua ceia, a sua casa e para presentear quem você ama. Feito à mão para iluminar momentos especiais.</p>
+    <div class="contagem" id="contagem" hidden></div>
+    <div class="hero-btns">
+      <a class="btn btn-ouro" href="#velas">Ver coleção de Natal</a>
+      <a class="btn btn-branco" href="#presentes">Presentes e empresas</a>
+    </div>
+  </div>
+  <div class="hero-img">
+    <img src="natal-merry-christmas.jpg" alt="Vela perfumada Merry Christmas YOUR CANDLE entre enfeites de Natal">
+  </div>
+</div>
+
+<!-- 2. VELAS -->
+<section class="velas" id="velas">
+  <div class="wrap">
+    <div class="titulo">
+      <h2>Nossas velas</h2>
+      <p>Cera vegetal, feitas à mão. Novidades de Natal e as perfumadas de sempre.</p>
+    </div>
+
+    <div class="natal-bloco">
+      <h3 class="bloco-titulo">Coleção Luzes de Natal <small>Novidades de fim de ano</small></h3>
+      <div class="produtos">
+        <div class="produto">
+          <span class="tag">Novo</span>
+          <img loading="lazy" src="natal-merry-christmas.jpg" alt="Vela Merry Christmas 180g com tampa dourada">
+          <h3>Vela Merry Christmas</h3>
+          <div class="desc">Gengibre, noz-moscada, canela e caramelo · 180g. Com um bonequinho de gengibre dentro.</div>
+          <div class="linha"><span class="preco">R$ 129,90</span><a class="btn btn-linha btn-sm" href="#" data-zap="Olá! Quero pedir a Vela Merry Christmas 180g (R$ 129,90).">Pedir</a></div>
+        </div>
+        <div class="produto">
+          <span class="tag">Novo</span>
+          <img loading="lazy" src="natal-quebra-nozes.jpg" alt="Vela Quebra-Nozes branca com laço vermelho e sininho dourado">
+          <h3>Vela Quebra-Nozes</h3>
+          <div class="desc">Um clássico natalino em forma de vela artesanal</div>
+          <div class="linha"><span class="preco">R$ 69,90</span><a class="btn btn-linha btn-sm" href="#" data-zap="Olá! Quero pedir a Vela Quebra-Nozes (R$ 69,90).">Pedir</a></div>
+        </div>
+        <div class="produto">
+          <span class="tag">Novo</span>
+          <img loading="lazy" src="natal-arvore.jpg" alt="Velas Árvore de Natal em camadas com sininho dourado">
+          <h3>Vela Árvore de Natal</h3>
+          <div class="desc">Delicadeza e encanto para decorar e presentear</div>
+          <div class="linha"><span class="preco">R$ 59,90</span><a class="btn btn-linha btn-sm" href="#" data-zap="Olá! Quero pedir a Vela Árvore de Natal (R$ 59,90).">Pedir</a></div>
+        </div>
+        <div class="produto">
+          <span class="tag">Novo</span>
+          <img loading="lazy" src="natal-rena.jpg" alt="Vela Rena com laço de cetim e etiqueta Your Candle">
+          <h3>Vela Rena</h3>
+          <div class="desc">Um detalhe encantador para a época mais especial do ano · 100g</div>
+          <div class="linha"><span class="preco">R$ 39,90</span><a class="btn btn-linha btn-sm" href="#" data-zap="Olá! Quero pedir a Vela Rena 100g (R$ 39,90).">Pedir</a></div>
+        </div>
+        <div class="produto">
+          <span class="tag">Novo</span>
+          <img loading="lazy" src="natal-kit-3-minis.jpg" alt="Kit com 3 mini velas: biscoitinho, árvore e floco de neve">
+          <h3>Kit 3 Mini Velas</h3>
+          <div class="desc">Três pequenas peças para celebrar a magia do Natal</div>
+          <div class="linha"><span class="preco">R$ 59,90</span><a class="btn btn-linha btn-sm" href="#" data-zap="Olá! Quero pedir o Kit 3 Mini Velas (R$ 59,90).">Pedir</a></div>
+        </div>
+        <div class="produto">
+          <span class="tag">Novo</span>
+          <img loading="lazy" src="mini-biscoitinho.jpg" alt="Mini velas em formato de biscoitinho de gengibre sobre tronco de madeira">
+          <h3>Mini Biscoitinho</h3>
+          <div class="desc">Mini vela de Natal · cerca de 35 a 40g</div>
+          <div class="linha"><span class="preco">R$ 19,90</span><a class="btn btn-linha btn-sm" href="#" data-zap="Olá! Quero pedir a Mini Vela Biscoitinho (R$ 19,90).">Pedir</a></div>
+        </div>
+        <div class="produto">
+          <span class="tag">Novo</span>
+          <img loading="lazy" src="mini-arvore.jpg" alt="Mini vela em formato de árvore de Natal com barbante vermelho e branco">
+          <h3>Mini Árvore</h3>
+          <div class="desc">Mini vela de Natal · cerca de 35 a 40g</div>
+          <div class="linha"><span class="preco">R$ 19,90</span><a class="btn btn-linha btn-sm" href="#" data-zap="Olá! Quero pedir a Mini Vela Árvore (R$ 19,90).">Pedir</a></div>
+        </div>
+        <div class="produto">
+          <span class="tag">Novo</span>
+          <img loading="lazy" src="mini-floco.jpg" alt="Mini velas em formato de floco de neve com sininhos dourados">
+          <h3>Mini Floco de Neve</h3>
+          <div class="desc">Mini vela de Natal · cerca de 35 a 40g</div>
+          <div class="linha"><span class="preco">R$ 19,90</span><a class="btn btn-linha btn-sm" href="#" data-zap="Olá! Quero pedir a Mini Vela Floco de Neve (R$ 19,90).">Pedir</a></div>
+        </div>
+        <div class="cta-card">
+          <div class="eyebrow">Sob encomenda</div>
+          <h3>Presentes personalizados &amp; pedidos corporativos</h3>
+          <p>Lembranças para clientes, equipes e eventos de fim de ano.</p>
+          <a class="btn btn-ouro btn-sm" href="#presentes">Saiba mais</a>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="bloco-titulo">Velas perfumadas</h3>
+    <div class="produtos">
+      <div class="produto">
+        <img loading="lazy" src="classica-botanique.jpg" alt="Vela Clássica Premium YOUR CANDLE em pote fosco com tampa">
+        <h3>Clássica Premium</h3>
+        <div class="desc">Vela perfumada · Consulte tamanhos e aromas disponíveis</div>
+        <div class="linha"><span class="preco">R$ 119,90</span><a class="btn btn-linha btn-sm" href="#" data-zap="Olá! Quero pedir a Vela Clássica Premium (R$ 119,90). Pode me informar os tamanhos e aromas disponíveis?">Pedir</a></div>
+      </div>
+      <div class="produto">
+        <img loading="lazy" src="sweet-candle.jpg" alt="Vela Sweet Candle com confeitos coloridos">
+        <h3>Sweet Candle</h3>
+        <div class="desc">Vela perfumada · Consulte tamanhos e aromas disponíveis</div>
+        <div class="linha"><span class="preco">R$ 129,90</span><a class="btn btn-linha btn-sm" href="#" data-zap="Olá! Quero pedir a Vela Sweet Candle (R$ 129,90). Pode me informar os tamanhos e aromas disponíveis?">Pedir</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. PRESENTES -->
+<section class="pers" id="presentes">
+  <div class="wrap">
+    <img loading="lazy" src="natal-presentes.jpg" alt="Vela Merry Christmas e vela de floco de neve em composição de presente de Natal">
+    <div>
+      <div class="eyebrow">Presentes personalizados · Pedidos corporativos</div>
+      <h2>Cada presente pode contar uma história especial.</h2>
+      <div class="itens">
+        <div><strong>Lembranças de fim de ano</strong>Para clientes, equipes e eventos.</div>
+        <div><strong>Aroma e rótulo personalizados</strong>Pensados de acordo com a ocasião ou a identidade da sua empresa.</div>
+        <div><strong>Individual ou em quantidade</strong>Encomendas para uma pessoa ou para toda a empresa.</div>
+      </div>
+      <div class="consulta"><b>Valores sob consulta</b>Orçamento conforme modelo, quantidade e personalização.</div>
+      <a class="btn btn-ouro" href="#contato" data-tipo="Orçamento personalizado">Solicite um orçamento</a>
+    </div>
+  </div>
+</section>
+
+<!-- 4. HISTÓRIA -->
+<section class="historia" id="historia">
+  <div class="wrap">
+    <img loading="lazy" src="classica-planta.jpg" alt="Vela YOUR CANDLE Handcrafted candles sobre um livro, ao lado de uma planta">
+    <div>
+      <div class="eyebrow">Nossa história</div>
+      <h2>Uma chama pode iluminar muito mais do que um ambiente.</h2>
+      <p>Meu nome é Eurides. Sou esposa, mãe de três filhos e fundadora da YOUR CANDLE.</p>
+      <p>Em 2023, depois do nascimento do meu segundo filho, quis estar mais perto da família sem abrir mão de um sonho. As velas entraram na minha história: meses de testes, descobertas e, enfim, a primeira venda.</p>
+      <p>O nome veio de uma ideia simples: <em>Your Candle</em>. A sua vela. Porque cada casa tem uma atmosfera, cada memória tem um perfume e cada momento merece uma luz.</p>
+      <div class="aromas">
+        <h3>Aromas</h3>
+        <ul>
+          <li>Baunilha</li><li>Alecrim</li><li>Pêra Inglesa</li><li>Figo</li><li>Bergamota</li><li>Cereja e avelã</li>
+        </ul>
+      </div>
+      <div class="ritual">Escolha o aroma. Acenda o momento.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. CONTATO -->
+<section class="contato" id="contato">
+  <div class="wrap">
+    <div class="intro">
+      <div class="eyebrow">Fale conosco</div>
+      <h2>Vamos escolher o seu Natal?</h2>
+      <p>Para encomendar, entre em contato e escolha seus favoritos. Personalizações e disponibilidade mediante consulta.</p>
+      <div class="canais">
+        <a href="https://wa.me/5513996286990" target="_blank" rel="noopener">WhatsApp <span>(13) 99628-6990</span></a>
+        <a href="https://instagram.com/yourcandle.velas" target="_blank" rel="noopener">Instagram <span>@yourcandle.velas</span></a>
+        <a href="mailto:contato.yourcandle@gmail.com">E-mail <span>contato.yourcandle@gmail.com</span></a>
+      </div>
+      <div class="horario">Segunda a sábado, das 09h às 18h (WhatsApp) · Bertioga/SP</div>
+
+      <div class="faq">
+        <h3>Perguntas frequentes</h3>
+        <details><summary>As velas são de cera vegetal?</summary><p>Sim. A YOUR CANDLE trabalha com velas perfumadas de cera vegetal.</p></details>
+        <details><summary>Vocês enviam para outras cidades?</summary><p>Sim. O envio e o frete dependem do endereço de destino e das condições do pedido.</p></details>
+        <details><summary>Fazem pedidos corporativos?</summary><p>Sim: presentes corporativos, eventos e ações de relacionamento.</p></details>
+        <details><summary>Posso personalizar o rótulo?</summary><p>Sim. Em projetos personalizados, desenvolvemos o rótulo conforme a ocasião ou a identidade da sua empresa.</p></details>
+      </div>
+    </div>
+
+    <form id="form-pedido" novalidate>
+      <div class="duo">
+        <div><label for="nome">Nome</label><input id="nome" name="nome" type="text" autocomplete="name" required></div>
+        <div><label for="tel">WhatsApp</label><input id="tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" required></div>
+      </div>
+      <div><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email"></div>
+      <div>
+        <label for="tipo">Tipo de pedido</label>
+        <select id="tipo" name="tipo">
+          <option>Fazer pedido</option>
+          <option>Vela personalizada</option>
+          <option>Orçamento personalizado</option>
+          <option>Pedido para empresa</option>
+          <option>Dúvidas / Outros</option>
+        </select>
+      </div>
+      <div id="extras">
+        <div class="duo">
+          <div><label for="qtd">Quantidade</label><input id="qtd" name="qtd" type="text" inputmode="numeric"></div>
+          <div><label for="data">Data desejada</label><input id="data" name="data" type="text" placeholder="Ex.: 20/12"></div>
+        </div>
+        <div><label for="pers">Tipo de personalização</label><input id="pers" name="pers" type="text" placeholder="Aroma, rótulo, identidade visual..."></div>
+      </div>
+      <div><label for="msg">Mensagem</label><textarea id="msg" name="msg"></textarea></div>
+      <button class="btn btn-escuro" type="submit">Enviar pelo WhatsApp</button>
+      <div class="nota">Ao enviar, o WhatsApp abre com seu pedido já preenchido.</div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="marca"><img src="logo-branco.png" alt="YOUR CANDLE — Handcrafted candles"></div>
+  <div>© <span id="ano"></span> YOUR CANDLE · Velas artesanais · Bertioga/SP</div>
+  <div style="margin-top:8px">Criado por <a href="https://juliana-santos-web-studio.julianapacheco0024.workers.dev" target="_blank" rel="noopener">Juliana Santos — Web Studio</a></div>
+</footer>
+
+<a class="zap" href="https://wa.me/5513996286990?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20YOUR%20CANDLE." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.12.55 4.2 1.6 6.03L4 28l7.1-1.86a12 12 0 0 0 4.94 1.06C22.68 27.2 28 21.8 28 15.04 28 8.4 22.68 3 16.04 3Zm0 21.9a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-4.2 1.1 1.12-4.1-.24-.38a9.9 9.9 0 1 1 8.73 4.97Zm5.43-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.88.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35Z"/></svg>
+</a>
+
+<script>
+  const WHATSAPP = "5513996286990";
+  const wa = (m) => "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(m);
+
+  document.querySelectorAll("[data-zap]").forEach(a => {
+    a.href = wa(a.dataset.zap);
+    a.target = "_blank";
+    a.rel = "noopener";
+  });
+
+  // Neve leve no topo
+  (function(){
+    const box = document.getElementById("neve");
+    if (!box) return;
+    for (let i = 0; i < 26; i++) {
+      const s = document.createElement("i");
+      const t = 7 + Math.random() * 9;
+      const z = 3 + Math.random() * 5;
+      s.style.left = Math.random() * 100 + "%";
+      s.style.animationDuration = t + "s";
+      s.style.animationDelay = (-Math.random() * t) + "s";
+      s.style.width = s.style.height = z + "px";
+      s.style.opacity = 0.35 + Math.random() * 0.5;
+      box.appendChild(s);
+    }
+  })();
+
+  // Contagem para o Natal
+  (function(){
+    const el = document.getElementById("contagem");
+    const h = new Date();
+    const natal = new Date(h.getFullYear(), 11, 25);
+    const dias = Math.ceil((natal - new Date(h.getFullYear(), h.getMonth(), h.getDate())) / 86400000);
+    if (dias > 0 && dias <= 60) {
+      el.textContent = dias === 1 ? "Falta 1 dia para o Natal" : "Faltam " + dias + " dias para o Natal";
+      el.hidden = false;
+    }
+  })();
+
+  const tipo = document.getElementById("tipo");
+  const extras = document.getElementById("extras");
+  const mostraExtras = () => extras.classList.toggle("on", /personaliz|orçamento|empresa/i.test(tipo.value));
+  tipo.addEventListener("change", mostraExtras);
+  document.querySelectorAll("[data-tipo]").forEach(a => a.addEventListener("click", () => {
+    tipo.value = a.dataset.tipo; mostraExtras();
+  }));
+
+  document.getElementById("form-pedido").addEventListener("submit", e => {
+    e.preventDefault();
+    const f = e.target;
+    const nome = f.nome.value.trim(), tel = f.tel.value.trim();
+    if (!nome || !tel) { (nome ? f.tel : f.nome).focus(); return; }
+    let m = "Olá! Vim pelo site da YOUR CANDLE.\n\n";
+    m += "Nome: " + nome + "\nWhatsApp: " + tel + "\n";
+    if (f.email.value.trim()) m += "E-mail: " + f.email.value.trim() + "\n";
+    m += "Tipo de pedido: " + f.tipo.value + "\n";
+    if (extras.classList.contains("on")) {
+      if (f.qtd.value.trim()) m += "Quantidade: " + f.qtd.value.trim() + "\n";
+      if (f.data.value.trim()) m += "Data desejada: " + f.data.value.trim() + "\n";
+      if (f.pers.value.trim()) m += "Personalização: " + f.pers.value.trim() + "\n";
+    }
+    if (f.msg.value.trim()) m += "\nMensagem: " + f.msg.value.trim();
+    window.open(wa(m), "_blank", "noopener");
+  });
+
+  document.getElementById("ano").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
