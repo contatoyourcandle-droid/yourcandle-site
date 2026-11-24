@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>YOUR CANDLE — Coleção Luzes de Natal 2026</title>
 <meta name="description" content="Coleção Luzes de Natal YOUR CANDLE: velas artesanais de cera vegetal, kits e presentes personalizados. Bertioga/SP.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="YOUR CANDLE">
+<meta property="og:title" content="YOUR CANDLE — Coleção Luzes de Natal 2026">
+<meta property="og:description" content="Velas artesanais de cera vegetal, kits e presentes personalizados. Faça seu pedido pelo WhatsApp.">
+<meta property="og:url" content="https://yourcandle-site.pages.dev/">
+<meta property="og:image" content="https://yourcandle-site.pages.dev/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0d0d0d">
 <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
 <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -97,6 +108,8 @@
   .produto .extra{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:10px;padding-top:10px;border-top:1px solid var(--linha);font-size:.92rem;color:var(--texto)}
   .produto .extra b{font-weight:500;color:var(--preto)}
   .preco{font-size:1.15rem;font-weight:500}
+  .produtos.quatro{grid-template-columns:repeat(4,1fr);gap:22px}
+  .produtos.quatro .produto h3{font-size:1.35rem}
   .tag{position:absolute;top:12px;left:12px;background:var(--preto);color:#fff;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;padding:5px 11px;font-weight:400;z-index:2}
   .cta-card{background:var(--preto);color:#fff;padding:34px 28px;display:flex;flex-direction:column;justify-content:center;gap:12px;min-height:320px}
   .cta-card .eyebrow{color:var(--ouro);margin:0}
@@ -108,7 +121,8 @@
   .natal-bloco{background:var(--off);margin:0 -24px 60px;padding:44px 24px 10px}
   .natal-bloco .bloco-titulo + .produtos{margin-bottom:34px}
   @media(max-width:900px){.produtos{grid-template-columns:repeat(2,1fr);gap:18px}}
-  @media(max-width:520px){.produtos{grid-template-columns:1fr;max-width:440px;margin-inline:auto}.natal-bloco{margin:0 -20px 50px;padding:34px 20px 6px}}
+  @media(max-width:900px){.produtos.quatro{grid-template-columns:repeat(2,1fr);gap:18px}.produtos.quatro .produto h3{font-size:1.45rem}}
+  @media(max-width:520px){.produtos.quatro{grid-template-columns:1fr}.produtos{grid-template-columns:1fr;max-width:440px;margin-inline:auto}.natal-bloco{margin:0 -20px 50px;padding:34px 20px 6px}}
 
   /* 3. Presentes */
   .pers{background:var(--off);color:var(--preto)}
@@ -215,7 +229,7 @@
   <div class="wrap">
     <div class="titulo">
       <h2>Nossas velas</h2>
-      <p>Cera vegetal, feitas à mão. Novidades de Natal e as perfumadas de sempre.</p>
+      <p>Cera vegetal, feitas à mão. Novidades de Natal, peônias e buquês, e as perfumadas de sempre.</p>
     </div>
 
     <div class="natal-bloco">
@@ -283,6 +297,35 @@
           <p>Lembranças para clientes, equipes e eventos de fim de ano.</p>
           <a class="btn btn-ouro btn-sm" href="#presentes">Saiba mais</a>
         </div>
+      </div>
+    </div>
+
+    <h3 class="bloco-titulo">Peônias &amp; buquês de velas <small>Flores de cera</small></h3>
+    <div class="produtos quatro">
+      <div class="produto">
+        <img loading="lazy" src="peonia-vela-caixa.jpg" alt="Vela em formato de peônia branca dentro de uma caixa">
+        <h3>Vela Peônia</h3>
+        <div class="desc">Vela artesanal em formato de peônia, que vem na caixa</div>
+        <div class="linha"><span class="preco">R$ 29,90</span><a class="btn btn-linha btn-sm" href="#" data-zap="Olá! Quero pedir a Vela Peônia (R$ 29,90).">Pedir</a></div>
+      </div>
+      <div class="produto">
+        <img loading="lazy" src="peonia-mini-buque.jpg" alt="Mini buquê com uma vela em formato de peônia rosa e fita Just for you">
+        <h3>Mini Buquê Peônia</h3>
+        <div class="desc">Um buquê com uma vela em formato de peônia rosa</div>
+        <div class="linha"><span class="preco">R$ 39,90</span><a class="btn btn-linha btn-sm" href="#" data-zap="Olá! Quero pedir o Mini Buquê Peônia (R$ 39,90).">Pedir</a></div>
+      </div>
+      <div class="produto">
+        <img loading="lazy" src="buque-luxo.jpg" alt="Buquê de velas Luxo com várias velas em formato de rosa em cores diferentes e fita Your Candle">
+        <h3>Buquê de Velas Luxo</h3>
+        <div class="desc">Buquê grande com várias velas em formato de rosa, de cores diferentes · 400 a 600g</div>
+        <div class="linha"><span class="preco">R$ 279,90</span><a class="btn btn-linha btn-sm" href="#" data-zap="Olá! Quero pedir o Buquê de Velas Luxo (R$ 279,90).">Pedir</a></div>
+      </div>
+      <div class="produto">
+        <span class="tag">Especial de Natal</span>
+        <img loading="lazy" src="buque-luxo-natal.jpg" alt="Buquê de velas Luxo especial de Natal com vela de quebra-nozes, rosas brancas e laço vermelho">
+        <h3>Buquê Luxo Especial de Natal</h3>
+        <div class="desc">A mais linda de todas: velas de quebra-nozes e partes da árvore de Natal</div>
+        <div class="linha"><span class="preco">R$ 279,90</span><a class="btn btn-linha btn-sm" href="#" data-zap="Olá! Quero pedir o Buquê de Velas Luxo Especial de Natal (R$ 279,90).">Pedir</a></div>
       </div>
     </div>
 
